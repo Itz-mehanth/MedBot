@@ -1,0 +1,234 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #00b7ff;
+    --text-color: #000000;
+  }
+
+* styles.css */
+.App {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+  .sessions-list {
+    margin-top: 20px;
+  }
+  
+  .session {
+    padding: 10px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.session:hover {
+    color: white;
+    background-color: #000000;
+  }
+  
+  .chat-area {
+    flex: 1;
+    display: flex;
+    height: 75vh;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .messages {
+    position: relative;
+    top: 100px;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    width: calc(100vw - 360px);
+    height: calc(100vh - 350px);
+    align-self:last baseline;
+    overflow-y: auto;
+    border-radius: 20px;
+    border-bottom: 1px solid #ccc;
+    background-image: linear-gradient(to right, #27c2ff, var(--secondary-color));
+  }
+  
+  .message {
+    margin-bottom: 15px;
+    
+  }
+  
+  .message.user {
+    text-align: right;
+    color: var(--text-color);
+  }
+  
+  .message.ai {
+    text-align: left;
+    color: var(--text-color);
+  }
+  
+  .input-area {
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+    width: 400px;
+    
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    color: black;
+  }
+  
+  .chat-page {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically (if needed) */
+    height: 100vh; /* Optional: adjust based on your layout */
+    width: 100vw;
+    background-color: var(--primary-color);
+  }
+  
+ .chat-area {
+    /* You may need to set widths for your Sidebar and ChatArea */
+    margin: 10px; /* Space between components */
+}
+ 
+.chat-area .messages .Welcome {
+    font-size: 30px;
+    font-weight: 500;
+    align-self: center;
+}
+
+.chat-page {
+    position: relative;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.sidebar {
+    position: relative;
+    padding: 10px;
+    top: 70px;
+    left: 10px; /* Initially hidden off-screen */
+    width: 250px; /* Width of the sidebar */
+    height: 75vh; /* Full height */
+    background-color: var(--secondary-color); /* Background color */
+    color: var(--text-color); /* Text color */
+    transition: right 0.3s ease; /* Smooth transition */
+    border-radius: 20px;
+  }
+
+  .menu-icon {
+    position: relative;
+    background: transparent;
+    border: none;
+    font-size: 24px; /* Adjust size as needed */
+    cursor: pointer;
+    color: var(--text-color); /* Optional: change color */
+  }
+  
+
+  .TopBanner {
+    position: fixed;
+    top: 2px;
+    left: 0px;
+    width: calc(100vw - 200px);
+    margin: 10px;
+    height: 100px; /* Adjust height as needed */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; /* Padding for content inside the banner */
+    border-radius: 20px; /* Adds rounded corners to the bottom */
+  }
+  
+  .TopBanner .BottomOverflow{
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+    height: 100px;
+    width: calc(100vw - 420px);
+    border-radius: 0px 0px 20px 20px;
+    background-color: var(--secondary-color);
+  }
+
+  .TopBanner .BottomOverflow .SideCircle{
+    position: absolute;
+    left: -20px;
+    top: 50px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 10px -10px 0px var(--secondary-color);
+  }
+
+  .TopBanner .BottomOverflow .SideCircleTop{
+    position: absolute;
+    right: -20px;
+    top: -50px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    box-shadow: -10px 10px 0px var(--secondary-color);
+  }
+
+  .TopBanner .BottomOverflow .LogoContainer{
+    position: absolute;
+    right: -110px;
+    top: -90px;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .TopBanner .BottomOverflow .SideRect{
+    position: absolute;
+    right: -115px;
+    top: -30px;
+    height: 130px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+  }
+
+  
+.HomePage{
+    display: flex;
+    flex-direction: row;
+    align-items: safe;
+    justify-content: center;
+    height: 80vh;
+    width: 100vw;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    
+}
+
