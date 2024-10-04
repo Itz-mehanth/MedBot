@@ -602,10 +602,11 @@
 
 .card.dp{
   height: 220px;
-  z-index: 2;
+  z-index: 4;
   width: 200px;
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
   position: absolute;
-  left: calc(50% - 150px);
+  left: calc(50%);
   top: 50px;
   border-radius: 15px;
   background-color: var(--background-color);
@@ -616,14 +617,41 @@
 .card.ra{
   position: absolute;
   height: 220px;
-  z-index: 1;
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
+  z-index: 3;
   width: 200px;
-  left: calc(50% - 100px);
+  left: calc(50%);
   top: 50px;
   border-radius: 15px;
   background-color: var(--background-color);
   display: flex;
   box-shadow: 10px 10px rgb(255, 238, 0);
+}
+.card.ap{
+  position: absolute;
+  height: 220px;
+  z-index: 2;
+  width: 200px;
+  left: calc(50%);
+  top: 50px;
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
+  border-radius: 15px;
+  background-color: var(--background-color);
+  display: flex;
+  box-shadow: 10px 10px rgb(174, 0, 255);
+}
+.card.cb{
+  position: absolute;
+  height: 220px;
+  z-index: 1;
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
+  width: 200px;
+  left: calc(50%);
+  top: 50px;
+  border-radius: 15px;
+  background-color: var(--background-color);
+  display: flex;
+  box-shadow: 10px 10px rgb(0, 225, 255);
 }
 
 .card .midcircle{
@@ -677,48 +705,143 @@
   border-radius: 10px;
 }
 
+.card.cb .pageTopic{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background: radial-gradient(circle, rgb(127, 246, 255) 60%, rgb(4, 184, 255));
+  height: 150px;
+  width: 94%;
+  border-radius: 10px;
+}
+
+.card.ap .pageTopic{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background: radial-gradient(circle, rgb(204, 127, 255) 60%, rgb(205, 4, 255));
+  height: 150px;
+  width: 94%;
+  border-radius: 10px;
+}
+
+.one{
+  z-index: 4; /* Card 1 is on top initially */
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
+  animation: BringForward1 1s ease-in-out forwards;
+}
+.two{
+  z-index: 3; /* Card 1 is on top initially */
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
+  animation: BringForward2 1s ease-in-out forwards;
+}
+.three{
+  z-index: 2; /* Card 1 is on top initially */
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
+  animation: BringForward3 1s ease-in-out forwards;
+}
+.four{
+  z-index: 4; /* Card 1 is on top initially */
+  transition: left 2s ease; /* Transition for smooth shrinking/expanding */
+  animation: BringBackward 1s ease-in-out forwards;
+}
+
+.cardone{
+  width: 70px;
+  font-weight: 800;
+  animation: bounce1 2s ease-in-out forwards;
+}
+.cardtwo{
+  width: 70px;
+  font-weight: 800;
+  animation: bounce2 2s ease-in-out forwards;
+}
+.cardthree{
+  width: 70px;
+  font-weight: 800;
+  animation: bounce3 2s ease-in-out forwards;
+}
+.cardfour{
+  width: 70px;
+  font-weight: 800;
+  animation: bounce4 2s ease-in-out forwards;
+}
+
 .card.dp.card-left {
   transform: translateX(0); /* Start at left */
   z-index: 2; /* Card 1 is on top initially */
-  animation: BringForwardDp 1s ease-in-out forwards;
+  animation: BringForward1 1s ease-in-out forwards;
   
 }
 
-@keyframes BringForwardDp {
+@keyframes BringForward1 {
   0% {
-    transform: translateX(100px) rotate(0); /* Rotate 45 degrees */
+    transform: rotate(0); /* Rotate 45 degrees */
+    z-index: 3;
+  }
+  50% {
+    /* transform: translateX(200px) rotate(95deg);  */
+    transform:translateX(-100px) rotate(90deg); /* Move 100px to the right */
+    z-index: 4;
+  }
+  100% {
+    transform: translateX(-100px) rotate(0); /* Rotate 45 degrees */
+    left: 50% - 100px;
+    z-index: 4;
+  }
+}
+@keyframes BringForward2 {
+  0% {
+    transform: rotate(0); /* Rotate 45 degrees */
+    z-index: 2;
+  }
+  50% {
+    /* transform: translateX(200px) rotate(95deg);  */
+    transform:translateX(-70px) rotate(0deg); /* Move 100px to the right */
+    z-index: 3;
+  }
+  100% {
+    transform: translateX(-70px) rotate(0); /* Rotate 45 degrees */
+    z-index: 3;
+  }
+}
+@keyframes BringForward3 {
+  0% {
+    transform: rotate(0); /* Rotate 45 degrees */
     z-index: 1;
   }
   50% {
     /* transform: translateX(200px) rotate(95deg);  */
-    transform: translateX(100px) rotate(90deg); /* Move 100px to the right */
+    transform: translateX(-40px) rotate(0deg); /* Move 100px to the right */
     z-index: 2;
   }
   100% {
-    transform: translateX(0px) rotate(0); /* Rotate 45 degrees */
+    transform: translateX(-40px) rotate(0); /* Rotate 45 degrees */
     z-index: 2;
   }
 }
 
 .card.dp.card-right {
   transform: translateX(0px); /* Card 2 offset to the right */
-  animation: BringBackwardDp 1s ease-in-out forwards;
+  animation: BringBackward 1s ease-in-out forwards;
   z-index: 1;
 }
 
-@keyframes BringBackwardDp {
-  0%{
-    z-index: 2;
+@keyframes BringBackward {
+  0% {
+    left: calc(50%);
+    z-index: 4;
   }
-  30%{
-    transform: translateX(-200px);
+  30% {
+    left: calc(50% - 250px); /* Corrected syntax for the left property */
     z-index: 1;
   }
   100% {
-    transform: translateX(100px);
+    left: calc(50% - 0px); /* Corrected syntax for the left property */
     z-index: 1;
   }
 }
+
 
 .card.ra.card-left {
   transform: translateX(0); /* Start at left */
@@ -754,6 +877,10 @@
   }
   30%{
     transform: translateX(-200px);
+    z-index: 1;
+  }
+  60%{
+    transform: translateX(-300px);
     z-index: 1;
   }
   100% {
@@ -820,6 +947,40 @@
     transform: translateY(0);  /* Back to ground */
   }
 }
+@keyframes bounce3 {
+  0% {
+    transform: translateY(0);  /* Starting point (ground level) */
+  }
+  30% {
+    transform: translateY(-40px) scale(1.1);  /* Jump up and slightly scale up */
+  }
+  50% {
+    transform: translateY(0) scale(1);  /* Back to ground with normal size */
+  }
+  70% {
+    transform: translateY(-30px) scale(1.05);  /* Smaller bounce up */
+  }
+  100% {
+    transform: translateY(0);  /* Back to ground */
+  }
+}
+@keyframes bounce4 {
+  0% {
+    transform: translateY(0);  /* Starting point (ground level) */
+  }
+  30% {
+    transform: translateY(-40px) scale(1.1);  /* Jump up and slightly scale up */
+  }
+  50% {
+    transform: translateY(0) scale(1);  /* Back to ground with normal size */
+  }
+  70% {
+    transform: translateY(-30px) scale(1.05);  /* Smaller bounce up */
+  }
+  100% {
+    transform: translateY(0);  /* Back to ground */
+  }
+}
 
 
 .chat-bubble {
@@ -833,7 +994,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   height: 3cap;
-  max-width: 70%;
+  width: 70%;
 }
 
 .chatBottom{
@@ -880,6 +1041,14 @@
   animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+.typing {
+  display: inline-block;
+  white-space: nowrap; /* This keeps the text from wrapping during typing */
+  overflow: hidden;
+  border-right: 3px solid #333; /* Cursor effect */
+  box-sizing: border-box;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
 /* Keyframes for typing effect */
 @keyframes typing {
   from { width: 0; }
@@ -893,7 +1062,7 @@
 }
 
 /* Bouncy pop-up effect */
-@keyframes bounceInRa {
+@keyframes bounceIn1 {
   from, to { transform: scale(1, 1); }
   25% { transform: scale(0.9, 1.1); }
   50% { transform: scale(1.1, 0.9); }
@@ -901,7 +1070,7 @@
 }
 
 /* Bouncy pop-up effect */
-@keyframes bounceInDp {
+@keyframes bounceIn2 {
   from, to { transform: scale(1, 1); }
   25% { transform: scale(0.9, 1.1); }
   50% { transform: scale(1.1, 0.9); }
@@ -909,12 +1078,18 @@
 }
 
 /* Apply the bouncy pop-up animation to the chat bubble */
-.chat-bubble.rapop {
-  animation: bounceInRa 0.6s ease-out;
+.chat-bubble.cardone {
+  animation: bounceIn1 0.6s ease-out;
 }
 
-.chat-bubble.dppop {
-  animation: bounceInDp 0.6s ease-out;
+.chat-bubble.cardtwo{
+  animation: bounceIn2 0.6s ease-out;
+}
+.chat-bubble.cardthree{
+  animation: bounceIn1 0.6s ease-out;
+}
+.chat-bubble.cardfour{
+  animation: bounceIn2 0.6s ease-out;
 }
 
 .model{
@@ -977,6 +1152,25 @@
   width: 100px;
 }
 
+.chatBubble{
+  top: 80px;
+  position: absolute;
+  right: -50px;
+  z-index: 2;
+  height: 100px;
+  width: 100px;
+}
+
+.pieChart{
+  top: 80px;
+  left: -50px;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  height: 100px;
+  width: 100px;
+}
+
 .profile-avatar {
   width: 40px; /* Adjust as needed */
   height: 40px; /* Adjust as needed */
@@ -988,3 +1182,4 @@
 .invisible{
   display: none;
 }
+

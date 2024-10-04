@@ -10,22 +10,23 @@ import defaultUser from '../assets/defaultUser.png';
 import medbot from '../assets/medbot.png';
 import { faChevronDown, faPaperPlane, micOn, faUpload, faUpLong, faMicrophone, faMicrophoneSlash } from '@fortawesome/free-solid-svg-icons';
 import report from '../assets/report.png';
+import chatBubble from '../assets/chatBubble.png';
+import pieChart from '../assets/pieChart.png';
 
 const ChatArea = ({ selectedSession, setSelectedSession, isSidebarOpen}) => {
   const [input, setInput] = useState('');
   const [file, setFile] = useState(null);
   const [micOn, setMicOn] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(-1);
-  const [isSwapped, setIsSwapped] = useState(false);
   const [userProfile, setUserProfile] = useState(null);
+  const [cards, setCards] = useState(['one', 'two', 'three', 'four']);
 
 
-  const handleSwap = () => {
-    if (isSwapped) {   
-      console.log(`dp is on top`);
-    }
-    
-    setIsSwapped(!isSwapped);
+  // Function to rotate the array to the right
+  const rotateRight = () => {
+    const last = cards[cards.length - 1]; // Get the last element
+    const rotatedArray = [last, ...cards.slice(0, cards.length - 1)]; // Move the last to the front
+    setCards(rotatedArray); // Update state with rotated array
   };
 
   const handleFileChange = (e) => {
@@ -89,7 +90,6 @@ const ChatArea = ({ selectedSession, setSelectedSession, isSidebarOpen}) => {
           setUploadProgress(progress);
         }
       });
-      
 
       // Check the response object
       console.log('Response from server:', response);
@@ -120,17 +120,29 @@ const ChatArea = ({ selectedSession, setSelectedSession, isSidebarOpen}) => {
   return (
     <div className={`chat-area ${isSidebarOpen ? '' : 'hidden'}`}>
       <div className='botPlace'>
-        <img src={medbot} alt={"bot"} className={`medbotcaptain ${isSwapped ? 'ra' : 'dp'}`} />
-        <div class={`chat-bubble ${isSwapped ? 'rapop' : 'dppop'}`}>
-          <p className={`WelcomeRa typing ${isSwapped ? '' : 'invisible'}`}>
+        <img src={medbot} alt={"bot"} className={`medbotcaptain card${cards[0]}`} />
+        <div class={`chat-bubble card${cards[0]}`}>
+          <p className={`WelcomeRa typing ${cards[0] == 'four'? cards[0] : 'invisible'}`}>
             <span class="welcome-line">Welcome to the</span>
-            <span style={{ color: 'red' }} class="welcome-line" > Medical Report Analyzer!</span>
+            <span style={{ color: 'red' }} class="welcome-line" > Report Analyzer!</span>
             <span className='chatBottom'></span>
             <span className='chatBottomCircle'>' '</span>
           </p>
-          <p className={`WelcomeDp typing ${isSwapped ? 'invisible' : ''}`}>
+          <p className={`WelcomeDp typing ${cards[0] == 'one' ? cards[0] : 'invisible'}`}>
             <span class="welcome-line">Welcome to the</span>
-            <span style={{ color: 'red' }} class="welcome-line" >Predictor!</span>
+            <span style={{ color: 'red' }} class="welcome-line" >Disease Predictor!</span>
+            <span className='chatBottom'>' '</span>
+            <span className='chatBottomCircle'>' '</span>
+          </p>
+          <p className={`WelcomeCb typing ${cards[0] == 'three' ? cards[0] : 'invisible'}`}>
+            <span class="welcome-line">Welcome to the</span>
+            <span style={{ color: 'red' }} class="welcome-line" >ChatBot!</span>
+            <span className='chatBottom'>' '</span>
+            <span className='chatBottomCircle'>' '</span>
+          </p>
+          <p className={`WelcomeAp typing ${cards[0] == 'two' ? cards[0] : 'invisible'}`}>
+            <span class="welcome-line">Welcome to the</span>
+            <span style={{ color: 'red' }} class="welcome-line" >Appointment Page!</span>
             <span className='chatBottom'>' '</span>
             <span className='chatBottomCircle'>' '</span>
           </p>
@@ -139,7 +151,7 @@ const ChatArea = ({ selectedSession, setSelectedSession, isSidebarOpen}) => {
       <div className={`messages ${isSidebarOpen ? '' : 'hidden'}`}>
         <div className="chat-header">
           <div className='card-container'></div>
-            <div className = {`card dp ${isSwapped ? 'card-right' : 'card-left'}`}  onClick={handleSwap}>
+            <div className = {`card dp ${cards[0]}`}  onClick={rotateRight}>
               <span className='midcircle'></span>
               <span className='leftcircle'></span>
               <span className='rightcircle'></span>
@@ -149,14 +161,32 @@ const ChatArea = ({ selectedSession, setSelectedSession, isSidebarOpen}) => {
               <img src={lungs} alt="Transparent Image" className='lungs'/>
               <img src={heart} alt="Transparent Image" className='heart'/>
             </div>
-            <div className={`card ra ${isSwapped ? 'card-left' : 'card-right'}`}  onClick={handleSwap}>
+            <div className={`card ra ${cards[1]}`}  onClick={rotateRight}>
               <span className='midcircle'></span>
               <span className='leftcircle'></span>
               <span className='rightcircle'></span>
               <h1 className='model'>REPORT ANALYZER</h1>
               <div className='pageTopic'></div>
-              <img src={medbot} alt="Transparent Image" className='medbot'/>
+              <img src={pieChart} alt="Transparent Image" className='pieChart'/>
               <img src={report} alt="Transparent Image" className='report'/>
+            </div>
+            <div className={`card cb ${cards[2]}`}  onClick={rotateRight}>
+              <span className='midcircle'></span>
+              <span className='leftcircle'></span>
+              <span className='rightcircle'></span>
+              <h1 className='model'>CHATBOT</h1>
+              <div className='pageTopic'></div>
+              <img src={medbot} alt="Transparent Image" className='medbot'/>
+              <img src={chatBubble} alt="Transparent Image" className='chatBubble'/>
+            </div>
+            <div className={`card ap ${cards[3]}`}  onClick={rotateRight}>
+              <span className='midcircle'></span>
+              <span className='leftcircle'></span>
+              <span className='rightcircle'></span>
+              <h1 className='model'>APPOINTMENT</h1>
+              <div className='pageTopic'></div>
+              <img src={medbot} alt="Transparent Image" className='medbot'/>
+              {/* <img src={chatBubble} alt="Transparent Image" className='chatBubble'/> */}
             </div>
         </div>
 
