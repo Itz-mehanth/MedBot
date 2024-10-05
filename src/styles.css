@@ -728,7 +728,7 @@
 .one{
   z-index: 4; /* Card 1 is on top initially */
   transition: left 2s ease; /* Transition for smooth shrinking/expanding */
-  animation: BringForward1 1s ease-in-out forwards;
+  animation: BringForward1 0.5s ease-in-out forwards;
 }
 .two{
   z-index: 3; /* Card 1 is on top initially */
@@ -770,7 +770,7 @@
 .card.dp.card-left {
   transform: translateX(0); /* Start at left */
   z-index: 2; /* Card 1 is on top initially */
-  animation: BringForward1 1s ease-in-out forwards;
+  animation: BringForward1 0.5s ease-in-out forwards;
   
 }
 
@@ -781,7 +781,7 @@
   }
   50% {
     /* transform: translateX(200px) rotate(95deg);  */
-    transform:translateX(-100px) rotate(90deg); /* Move 100px to the right */
+    transform:translateX(100px) rotate(0deg); /* Move 100px to the right */
     z-index: 4;
   }
   100% {
@@ -1152,6 +1152,16 @@
   width: 100px;
 }
 
+
+.calender{
+  top: 140px;
+  position: absolute;
+  right: -50px;
+  z-index: 2;
+  height: 80px;
+  width: 80px;
+}
+
 .chatBubble{
   top: 80px;
   position: absolute;
@@ -1171,6 +1181,13 @@
   width: 100px;
 }
 
+.pdf{
+  position: relative;
+  left: 10px;
+  height: 35px;
+  width: 30px;
+}
+
 .profile-avatar {
   width: 40px; /* Adjust as needed */
   height: 40px; /* Adjust as needed */
@@ -1183,3 +1200,54 @@
   display: none;
 }
 
+.uploadedFile{
+  width: 400px;
+  background-color: #ccc;
+  position: relative;
+  bottom: 0;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.uploadProgress{
+  font-size: '16px';
+  color: '#007BFF';
+}
+
+.closebutton{
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+}
+
+.closebutton:hover{
+  background-color: rgb(255, 93, 93);
+  color: white;
+}
+
+.uploadBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 250px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.fileDetails{
+  display: flex;
+  align-items: start;
+}
+
+.diseasePredictorPage{
+  position: relative;
+  width: 100%;
+  height: 500px;
+}

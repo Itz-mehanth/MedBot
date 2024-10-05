@@ -6,6 +6,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './auth/firebase'; // Import Firebase auth
 import { setDoc, doc, getDoc } from 'firebase/firestore';
 import { db } from './auth/firebase'; // Import Firestore
+import DiseasePredictor from './diseasePrediction';
 
 function App() {
   const [userId, setUserId] = useState(null);
