@@ -10,7 +10,6 @@ from sklearn.preprocessing import LabelEncoder
 from scipy.stats import chi2_contingency
 from scipy.stats import chi2_contingency
 import random
-import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 import json
