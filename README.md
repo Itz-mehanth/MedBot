@@ -25,7 +25,7 @@ Done by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https://github.co
 
 ## Technologies Used
 - **Python and React.js, FastAPI** : Our techstack
-- **SVM,KNNClassifier,Chi 2 Scores**: For disease prediction.
+- **SVM,KNNClassifier,Chi 2 Scores (Optimised by Intel)**: For disease prediction.
 - **MedLLaMA2 & LLaMA 3.2 (Ollama)**: Locally installed LLMs for general health and disease related queries and predictions.
 - **Retrieval-Augmented Generation (RAG)**: To retrieve and analyze medical reports.
 - **Python**: Backend logic.
