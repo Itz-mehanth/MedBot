@@ -2,6 +2,8 @@
 
 This medical chatbot assists users with disease prediction, medical report analysis, and general health-related queries. It uses finetuned LLM's like MedLLaMA2 and LLaMA 3.2 along with Machine Learning approaches like SVM, KNN that are used on an Intel version of scikit-learn to provide accurate predictions and insights. The chatbot also allows users to upload medical reports and get them summarized, offering lifestyle recommendations and answering doubts about their health. It also allows users to enter their symptoms, get a preliminary diagnosis as well as know more and ask questions about it. This feature can be used to aid admission of patients and streamlining resource management in hospitals.
 
+Done by Saipranav, Mehanth,Jaswanth Sridharan, Kushal Shyam Potta.
+
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
