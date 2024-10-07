@@ -5,7 +5,7 @@ MedBot is a healthcare chatbot designed to offer personalized medical insights a
 
 It allows users to ask detailed questions about their reports and provides prognosis predictions based on symptoms, therefore helping hospitals allocate resources more effectively. It also helps users ask questions about their suggested prognosis and learn more about their ailments and symptoms. Whether you're looking to learn more about a disease or gain a clearer picture of your health, MedBot serves as a valuable tool for both patients and healthcare providers.
 
-Done with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https://github.com/Itz-mehanth), [Jaswanth Sridharan](https://github.com/jas2506), [Kushaal Shyam Potta](https://github.com/kushaalshyam).
+Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https://github.com/Itz-mehanth), [Jaswanth Sridharan](https://github.com/jas2506), [Kushaal Shyam Potta](https://github.com/kushaalshyam).
 
 ## Table of Contents
 - [Features](#features)
@@ -50,9 +50,9 @@ Done with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https
    ```bash
    git clone https://github.com/your-repo/medical-chatbot.git
    cd medical-chatbot
-2. **Open folder <Report>**:
+2. **Open folder <ReportSummarizer>**:
     ```bash
-    cd <path to Report>
+    cd <path to ReportSummarizer>
 3. **Create a Virtual Environment**
     ```bash
     python3 -m venv venv
