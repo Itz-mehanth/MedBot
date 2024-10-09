@@ -91,7 +91,7 @@ TBD.
     source venv/bin/activate
 4. **Install the Required Dependencies**
     ```bash
-    pip install -r requirements_mra.txt
+    pip install -r requirements.txt
 5. **Install Ollama**
     Install Ollama from the official website and install the required LLM's locally. Ignore if done already.
     ```bash
