@@ -598,40 +598,7 @@ async def chat(user_question: dict):
 
     return {"response": response}
         
-# disease_name=do()
-    
-# ch=input("Do you want more information? (y/n): ")
 
-# if ch.lower()=='y':
-    
-#         m_name=input("Do you want to use Gemini or MedLLaMA Model? :")
-
-#         if len(disease_name)==1:
-#             u_disease=disease_name[0]
-#         else: 
-#             u_disease=input("Enter the disease name to get more information on the same: ")
-
-#         if m_name.lower()=='gemini':
-#             description=create_gemini_response([u_disease])
-#             print("Model response: ",description)
-            
-#             qn=input("Feel free to ask me any following questions here: ")
-#             while qn.lower()!='no questions':
-#                 print(gemini_answer_user_question(u_disease,qn))
-#                 qn=input("Feel free to ask me any following questions here('no questions' to stop):\n ")
-
-    
-            
-#         if m_name.lower()=='medllama':
-#             description=create_medllama_response([u_disease])
-#             print("Model response: ",description)
-            
-#             qn=input("Feel free to ask me any following questions here: ")
-#             while qn.lower()!='no questions' or qn.lower()!='no question' or qn.lower()!='no':
-#                 print(medllama_answer_user_question(u_disease, qn))
-#                 qn=input("Feel free to ask me any following questions here('no questions' to stop):\n ")
-#                 if qn.lower() in ['no questions','no','no question']:
-#                     break
                 
     
 uvicorn.run(app, host="0.0.0.0",port=8000)
