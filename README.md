@@ -20,8 +20,8 @@ Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https
 
 ## Features
 - **Disease Prediction and Disease Query redressal**: Predicts diseases based on user input processed using KNN, SVM, Chi 2 scores, LLaMa3.2 and MedLLaMA2.
-- **Medical Report Analysis**: Upload medical reports for analysis and receive a concise summary through Retrieval augmented generation.
-- **Report Upload & Doubts**: Users can upload medical reports and ask specific questions or clarify doubts about the reports.
+- **Medical Report Analysis**: Upload medical reports for analysis and receive a concise summary.
+- **Report Upload & Doubts**: Users can upload medical reports and ask specific questions or clarify doubts about the reports,using Retrieval augmented generation.
 - **Health Query Resolution**: Ask general health-related questions and get real-time responses from the chatbot.
 
 
