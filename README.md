@@ -14,7 +14,7 @@ Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https
 - [Demo Video](#Demo-Video)
 - [Installation](#installation)
 - [Usage](#usage)
-- [LLM Finetuning Parameters](#LLM-Finetuning---Parameters-Considered:)
+- [LLM Finetuning Parameters](#llm-finetuning---parameters-considered)
 
 ## Features
 - **Disease Prediction and Disease Query redressal**: Predicts diseases based on user input processed using KNN, SVM, Chi 2 scores, LLaMa3.2 and MedLLaMA2.
