@@ -27,15 +27,14 @@ Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https
 
 ## Technologies Used
 - **Python and React.js, FastAPI** : Our techstack
-- **SVM,KNNClassifier,Chi 2 Scores (Optimised by Intel)**: For disease prediction.
-- **MedLLaMA2 & LLaMA 3.2 (Ollama)**: Locally installed LLMs for general health and disease related queries and predictions.
-- **Retrieval-Augmented Generation (RAG)**: To retrieve and analyze medical reports.
-- **Python**: Backend logic.
+- **SVM,KNNClassifier,Chi 2 Scores (Optimised by Intel)**: Machine learning algorithms for disease prediction.
+- **MedLLaMA2 & LLaMA 3.2**: Locally installed LLMs for general health and disease related queries and predictions.
+-- **Retrieval-Augmented Generation (RAG)**: To retrieve and analyze medical reports.
 - **Ollama**: For managing local LLM installations.
-- **RAG & LLM**: To provide real-time analysis of medical reports and health insights.
 - **OCR (Optical Character Recognition) using pdfplumber**: Used to extract text from uploaded medical report images or PDFs.
 
 ## Architecture of our solution:
+
 ### Workflow of Disease Prediction:
 ![My Image](https://raw.githubusercontent.com/Itz-mehanth/MedBot/refs/heads/main/MedBot%20arch.png)
 
@@ -43,7 +42,7 @@ Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https
 ![My Image](https://raw.githubusercontent.com/Itz-mehanth/MedBot/refs/heads/main/report%20arch.png)
 
 ## Demo Video
-
+TBD.
 
 ## Installation
 
@@ -184,8 +183,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 To predict a disease based on symptoms:
 - Open the chatbot interface.
 - Select the "Disease Prediction" option.
-- Enter the symptoms you are experiencing.
-- The chatbot will return the most likely diseases based on your input, as well as a detailed explaination of your symptoms and prognosis.
+- Enter the symptoms you are experiencing, and answer with yes/no for further questions we ask.
+- The chatbot will return the most likely disease(s) based on your input, as well as a detailed explaination of your symptoms and prognosis.
 - You can proceed to ask queries about your prognosis, symptoms etc to your personal chatbot.
 
 ### 2. Medical Report Analysis
@@ -199,7 +198,7 @@ To analyze a medical report:
 To ask general health-related questions:
 - Select the "Ask Health Query" option.
 - Type in your question (e.g., "What are the symptoms of diabetes?").
-- The chatbot will respond with relevant information retrieved from the LLM models.
+- The chatbot will respond with relevant information retrieved from the trained LLM models.
 
 ## LLM Finetuning - Parameters Considered:
 
