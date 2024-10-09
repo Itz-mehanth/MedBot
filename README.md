@@ -1,9 +1,11 @@
 # MedBot - Your Health Matters!
 ![My Image](https://raw.githubusercontent.com/Itz-mehanth/MedBot/refs/heads/main/banner.png)
 
-MedBot is a healthcare chatbot designed to offer personalized medical insights and support. With features that range from handling general & specific medical queries to summarizing complex medical reports and explaining them to users, MedBot empowers users to better understand their health. 
+MedBot is a healthcare chatbot designed to offer personalized medical insights and support. With features that range from handling medical queries and disease prediction to summarizing complex medical reports and explaining them to users, MedBot truly empowers users to better understand their health. 
 
-It allows users to ask detailed questions about their reports and provides prognosis predictions based on symptoms, therefore helping hospitals allocate resources more effectively. It also helps users ask questions about their suggested prognosis and learn more about their ailments and symptoms. Whether you're looking to learn more about a disease or gain a clearer picture of your health, MedBot serves as a valuable tool for both patients and healthcare providers.
+It allows users to ask detailed questions about their medical reports or read a simplified summary of it. It also provides a suggested prognosis (disease) prediction based on the symptoms the user faces, therefore helping hospitals allocate resources more effectively even before users arrive at the hospital. It helps users ask questions about their suggested prognosis and learn more about their ailments and symptoms through a user friendly chatbot.
+
+Whether you're looking to learn more about a disease or gain a clearer picture of your health, MedBot serves as a valuable tool for both patients and healthcare providers.
 
 Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https://github.com/Itz-mehanth), [Jaswanth Sridharan](https://github.com/jas2506), [Kushaal Shyam Potta](https://github.com/kushaalshyam).
 
