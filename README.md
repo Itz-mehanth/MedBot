@@ -10,11 +10,11 @@ Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https
 ## Table of Contents
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Architecture of our solution](#Architecture-of-our-solution)
+- [Demo Video](#Demo-Video)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Architecture of our solution](#Architecture-of-our-solution)
-- [Workflow of Report Summarization](#Workflow-of-Report-Summarization)
-
+- [LLM Finetuning Parameters](#LLM-Finetuning---Parameters-Considered:)
 
 ## Features
 - **Disease Prediction and Disease Query redressal**: Predicts diseases based on user input processed using KNN, SVM, Chi 2 scores, LLaMa3.2 and MedLLaMA2.
@@ -34,9 +34,10 @@ Made with ❤️ by [Saipranav M](https://github.com/AvGeeky), [Mehanth T](https
 - **OCR (Optical Character Recognition) using pdfplumber**: Used to extract text from uploaded medical report images or PDFs.
 
 ## Architecture of our solution:
+### Workflow of Disease Prediction:
 ![My Image](https://raw.githubusercontent.com/Itz-mehanth/MedBot/refs/heads/main/MedBot%20arch.png)
 
-## Workflow of Report Summarization:
+### Workflow of Report Summarization:
 ![My Image](https://raw.githubusercontent.com/Itz-mehanth/MedBot/refs/heads/main/report%20arch.png)
 
 ## Demo Video
@@ -198,7 +199,7 @@ To ask general health-related questions:
 - Type in your question (e.g., "What are the symptoms of diabetes?").
 - The chatbot will respond with relevant information retrieved from the LLM models.
 
-### 4. Finetune Parameters Considered:
+## LLM Finetuning - Parameters Considered:
 
     llama3.2_mod.md:
     PARAMETER num_ctx 4096
