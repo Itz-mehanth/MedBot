@@ -50,7 +50,7 @@ TBD.
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-repo/medical-chatbot.git
+   git clone https://github.com/Itz-mehanth/MedBot.git
    cd medical-chatbot
 2. **Open folder <ReportSummarizer>**:
     ```bash
